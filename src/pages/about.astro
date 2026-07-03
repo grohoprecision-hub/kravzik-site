@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Kravzik | IATF 16949 Precision Metal Stamping Manufacturer"
+  description="Kravzik is an IATF 16949 certified precision metal stamping manufacturer specializing in custom lead frames, progressive die stamping, and metal components for global B2B markets."
+>
+  <section class="bg-navy-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Company</p>
+      <h1 class="text-white mb-4">About Kravzik</h1>
+      <p class="text-steel-300 text-lg max-w-2xl">
+        Precision manufacturing, engineered from the ground up for global B2B supply chains.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 text-sm text-steel-500 leading-relaxed">
+        <p>
+          Kravzik is a precision metal stamping manufacturer serving global OEMs and Tier 1 suppliers in the semiconductor, automotive, telecommunications, aerospace, medical, and industrial sectors. Operating from an <strong class="text-steel-500">IATF 16949</strong> and <strong class="text-steel-500">ISO 9001</strong> certified facility, we combine high-speed progressive die stamping technology with rigorous process control to deliver components that meet the most demanding specifications.
+        </p>
+
+        <h2 class="text-xl">Our Manufacturing Philosophy</h2>
+        <p>
+          We approach every project through the lens of the sourcing engineer: What tolerances must hold? What are the failure modes? How do we eliminate variability before it reaches the customer? This engineer-driven methodology means our quotes come with feasibility analysis, not just pricing. Our production runs come with in-process SPC data, not just shipped boxes.
+        </p>
+
+        <h2 class="text-xl">Core Capabilities</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            'High-speed progressive die stamping up to 1500+ SPM',
+            'In-house progressive die tooling design and manufacturing',
+            'Material range: copper alloys, steel, aluminum, specialty alloys',
+            'Post-stamping: plating, heat treatment, assembly, packaging',
+            '5-axis CNC machining for prototyping and die components',
+            'Wire EDM with 0.02mm positioning accuracy',
+            'In-die vision inspection and 100% AOI verification',
+            'Cleanroom-compatible packaging for sensitive components',
+          ].map(item => (
+            <div class="flex items-start gap-2 p-3 bg-steel-100/50 rounded">
+              <span class="text-accent font-bold shrink-0">&check;</span>
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <h2 class="text-xl">Quality Management</h2>
+        <p>
+          Our quality management system is certified to <strong class="text-steel-500">IATF 16949</strong>, the global automotive industry standard that mandates defect prevention, continuous improvement, and supply chain quality management. This same rigor is applied to every project across all industries we serve.
+        </p>
+        <p>
+          Quality control processes include:
+        </p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Incoming material certification and lot traceability</li>
+          <li>First-article inspection with full dimensional reporting</li>
+          <li>In-process SPC monitoring at critical-to-quality stations</li>
+          <li>Automated optical inspection (AOI) at production speeds</li>
+          <li>Final audit sampling per AQL or customer-specified plan</li>
+        </ul>
+
+        <h2 class="text-xl">Partner With Kravzik</h2>
+        <p>
+          We work as an extension of your engineering and procurement team — not as a transactional supplier. Whether you need a custom lead frame for a new IC package design or a high-volume stamped component for an established automotive program, we bring the same level of technical engagement and production discipline.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-accent">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-white mb-4">Work With Us</h2>
+      <p class="text-white/80 text-lg mb-8">Contact our engineering team to discuss your next precision stamping project.</p>
+      <a href="/contact/" class="inline-flex items-center px-8 py-3.5 text-sm font-semibold text-accent bg-white hover:bg-steel-100 rounded transition-colors">
+        Contact Us
+      </a>
+    </div>
+  </section>
+</BaseLayout>

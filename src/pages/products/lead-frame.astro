@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Custom Lead Frames & Stamped Leadframes | High Precision Manufacturing"
+  description="Kravzik manufactures high precision stamped lead frames and leadframes for semiconductor IC packaging. IATF 16949 certified, plus-minus 0.002mm tolerance, 1500+ SPM. Custom lead frames for automotive, telecom, medical."
+>
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Products / Lead Frames</p>
+        <h1 class="text-white mb-4">High Precision Stamped Lead Frames</h1>
+        <p class="text-steel-300 text-lg leading-relaxed">
+          Coplanarity-critical custom lead frames for semiconductor IC packaging. Manufactured to sub-micron precision in our IATF 16949 certified facility, with 100% burr-free micro-hole perforation at speeds exceeding 1500 SPM.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="mb-4">What Is a Lead Frame?</h2>
+        <p class="text-steel-400 leading-relaxed mb-4">
+          A lead frame is a thin metal plate to which semiconductors are attached during the device assembly process. Also called a <strong class="text-steel-500">leadframe</strong>, this thin-layered metal component connects the wiring from tiny electrical terminals on the semiconductor surface to the large-scale circuitry on printed circuit boards and electronic devices.
+        </p>
+        <p class="text-steel-400 leading-relaxed mb-4">
+          As a <strong class="text-steel-500">lead frame manufacturer</strong>, quality is the defining parameter. Any microscopic defect — edge deformation, burr formation, or coplanarity deviation — can adversely impact semiconductor adhesion and render the greater assembly inoperable.
+        </p>
+        <p class="text-steel-400 leading-relaxed">
+          Our <strong class="text-steel-500">stamped lead frames</strong> are engineered to eliminate these risks through advanced progressive die tooling, real-time in-die vision inspection, and precision process control at every stage of production.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capability Metrics -->
+  <section class="py-12 bg-steel-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {[
+          { value: '+/- 0.002mm', label: 'Tolerance Control' },
+          { value: '1500+ SPM', label: 'Stamping Speed' },
+          { value: '100% Burr-Free', label: 'Edge Quality' },
+          { value: '0.10mm', label: 'Min Material Thickness' },
+        ].map(m => (
+          <div class="p-6 bg-white rounded-lg border border-steel-200/50">
+            <div class="text-2xl font-extrabold text-accent mb-1" set:html={m.value} />
+            <div class="text-xs font-medium text-steel-400 uppercase tracking-wider">{m.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-10 text-center">Lead Frame Applications by Industry</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            industry: 'Semiconductor',
+            desc: 'IC lead frames for device packaging across the semiconductor ecosystem.',
+            items: 'QFN leadframes, SOIC leadframes, QFP leadframes, DIP leadframes, BGA leadframes, Optocoupler leadframes, ASIC leadframes',
+          },
+          {
+            industry: 'Automotive EV & E-Mobility',
+            desc: 'Power module and control system leadframes for next-generation electric vehicles.',
+            items: 'IGBT module leadframes, MOSFET leadframes, Power module leadframes, ECU leadframes, LiDAR sensor leadframes, Inverter leadframes',
+          },
+          {
+            industry: 'Telecommunications',
+            desc: 'High-frequency leadframes for RF and optical communication systems.',
+            items: 'RF module leadframes, Optical transceiver leadframes, Base station leadframes, Router leadframes, Antenna leadframes',
+          },
+          {
+            industry: 'Consumer Electronics',
+            desc: 'Miniaturized leadframes for compact consumer devices.',
+            items: 'SMD LED leadframes, LED bracket leadframes, Display driver leadframes, Camera sensor leadframes, Wearable device leadframes',
+          },
+          {
+            industry: 'Medical & Healthcare',
+            desc: 'Precision leadframes for life-critical medical devices and implantables.',
+            items: 'Pacemaker IC leadframes, Biosensor leadframes, Hearing aid leadframes, Ultrasound leadframes, Implantable device leadframes',
+          },
+          {
+            industry: 'Industrial & Machinery',
+            desc: 'Robust leadframes for demanding industrial control environments.',
+            items: 'Motor drive leadframes, PLC controller leadframes, Industrial relay leadframes, Power supply leadframes',
+          },
+        ].map(app => (
+          <div class="p-6 bg-steel-100/50 rounded-lg border border-steel-200/50">
+            <h3 class="text-lg mb-2">{app.industry}</h3>
+            <p class="text-sm text-steel-400 mb-3">{app.desc}</p>
+            <div class="flex flex-wrap gap-1.5">
+              {app.items.split(', ').map(item => (
+                <span class="inline-block px-2.5 py-1 text-xs bg-white border border-steel-200 rounded text-steel-500">{item}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Critical Risks & Solutions -->
+  <section class="py-16 md:py-20 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-white mb-4 text-center">Critical Risks in Lead Frame Stamping</h2>
+      <p class="text-steel-400 text-center mb-12 max-w-2xl mx-auto">
+        Each risk below is identified, quantified, and mitigated through our engineered stamping solutions — not through post-process inspection alone.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            risk: 'Coplanarity Deviation',
+            impact: 'Non-flat leadframes cause die attach failure, wire bonding misalignment, and package warpage during molding.',
+            solution: 'Precision-guided stripper plates with micro-adjustable die clearance. In-die coining stations that stress-relieve the strip before final blanking. Continuous laser flatness measurement at 100% inspection rate.',
+          },
+          {
+            risk: 'Micro-Burr Formation',
+            impact: 'Burrs exceeding 10 microns disrupt wire bonding, create short circuits, and contaminate cleanroom assembly environments.',
+            solution: 'Ultra-fine-grain tungsten carbide tooling with polished cutting edges maintained to sub-micron sharpness. Progressive die stations with dedicated burr-suppression geometry at each cutting operation.',
+          },
+          {
+            risk: 'Edge Deformation & Micro-Cracking',
+            impact: 'Stressed edges lead to lead bending during trim/form operations and latent field failures under thermal cycling.',
+            solution: 'Optimized punch-to-die clearance ratios per material thickness. Radius-controlled cutting edges with multi-stage shaving stations that progressively refine the sheared surface.',
+          },
+        ].map(item => (
+          <div class="p-6 bg-navy-800 rounded-lg border border-navy-700">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-3 h-3 bg-accent rounded-full shrink-0"></span>
+              <h3 class="text-white text-base">{item.risk}</h3>
+            </div>
+            <p class="text-sm text-steel-400 leading-relaxed mb-1">
+              <span class="text-steel-500 font-semibold text-xs uppercase tracking-wider">Impact: </span>
+              {item.impact}
+            </p>
+            <p class="text-sm text-steel-400 leading-relaxed">
+              <span class="text-green-400 font-semibold text-xs uppercase tracking-wider">Solution: </span>
+              {item.solution}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineered Alloys -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-4 text-center">Engineered Alloys for Lead Frame Packaging</h2>
+      <p class="text-steel-400 text-center mb-12 max-w-2xl mx-auto">
+        Material selection directly determines electrical conductivity, thermal dissipation, and mechanical integrity. Our inventory covers the full spectrum of leadframe-grade alloys.
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-steel-200">
+              <th class="text-left py-3 px-4 text-xs font-semibold text-navy-900 uppercase tracking-wider">Alloy</th>
+              <th class="text-left py-3 px-4 text-xs font-semibold text-navy-900 uppercase tracking-wider">Composition</th>
+              <th class="text-left py-3 px-4 text-xs font-semibold text-navy-900 uppercase tracking-wider">Conductivity (% IACS)</th>
+              <th class="text-left py-3 px-4 text-xs font-semibold text-navy-900 uppercase tracking-wider">Tensile Strength</th>
+              <th class="text-left py-3 px-4 text-xs font-semibold text-navy-900 uppercase tracking-wider">Primary Application</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-steel-200/50">
+            {[
+              { alloy: 'C19400', comp: 'Cu-Fe-P', cond: '65', strength: '450-550 MPa', app: 'General-purpose IC leadframes, consumer electronics' },
+              { alloy: 'C70250', comp: 'Cu-Ni-Si-Mg', cond: '43', strength: '650-750 MPa', app: 'High-strength power module leadframes, automotive' },
+              { alloy: 'Alloy 42', comp: 'Fe-42Ni', cond: '3', strength: '550-650 MPa', app: 'Low-expansion leadframes for ceramic packages' },
+              { alloy: 'C18150', comp: 'Cu-Cr-Zr', cond: '80', strength: '480-560 MPa', app: 'High-conductivity power semiconductor leadframes' },
+              { alloy: 'C10200', comp: 'OFHC Copper', cond: '101', strength: '220-280 MPa', app: 'Ultra-high conductivity applications, RF leadframes' },
+            ].map(alloy => (
+              <tr class="hover:bg-steel-100/50">
+                <td class="py-3 px-4 font-semibold text-navy-900">{alloy.alloy}</td>
+                <td class="py-3 px-4 text-steel-500">{alloy.comp}</td>
+                <td class="py-3 px-4 text-steel-500">{alloy.cond}</td>
+                <td class="py-3 px-4 text-steel-500">{alloy.strength}</td>
+                <td class="py-3 px-4 text-steel-500 text-xs">{alloy.app}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post-Stamping -->
+  <section class="py-16 md:py-20 bg-steel-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-4 text-center">Post-Stamping & Plating Capabilities</h2>
+      <p class="text-steel-400 text-center mb-12 max-w-2xl mx-auto">
+        Leadframe functionality depends on surface finish. Our in-house plating and coating lines ensure consistent deposit thickness and adhesion.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { title: 'Silver Plating', desc: 'Spot and overall silver plating for wire bond pads. Controlled thickness from 1.5 to 6.0 microns with 100% XRF verification.' },
+          { title: 'Nickel-Palladium Plating', desc: 'Ni/Pd/Au pre-plated leadframes (PPF) eliminating post-assembly solder plating. Superior solderability without whisker risk.' },
+          { title: 'Selective Plating', desc: 'Precision stripe and spot plating on continuous reel-to-reel lines. Minimized precious metal consumption with exact deposit placement.' },
+          { title: 'Surface Passivation', desc: 'Anti-tarnish and oxidation protection for copper alloy leadframes. Extended shelf life without compromising electrical performance.' },
+        ].map(service => (
+          <div class="p-5 bg-white rounded-lg border border-steel-200/50">
+            <h3 class="text-base font-semibold text-navy-900 mb-2">{service.title}</h3>
+            <p class="text-sm text-steel-400 leading-relaxed">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-4 text-center">Quality Assurance & Process Control</h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          '<strong class="text-steel-500">IATF 16949 certified</strong> quality management system governing all lead frame production lines.',
+          'In-die vision inspection with micron-level defect detection. Cameras positioned after each forming station capture and reject deviations in real time.',
+          '100% dimensional verification using automated optical inspection (AOI) systems. Critical dimensions checked against CAD nominal with SPC trending.',
+          'Coplanarity measurement via laser profilometry. Every strip segment verified for flatness within specified tolerance before reel packaging.',
+          'Tensile, hardness, and conductivity testing per material lot. Full traceability from raw coil to finished lead frame strip.',
+          'Cleanroom-compatible packaging. Lead frames are sealed in anti-static, humidity-controlled packaging for contamination-free delivery.',
+        ].map((item, i) => (
+          <div class="flex gap-4 p-4 bg-steel-100/50 rounded-lg">
+            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0 mt-0.5">{i + 1}</div>
+            <p class="text-sm text-steel-500 leading-relaxed" set:html={item}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-20 bg-steel-100/50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-10 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {[
+          {
+            q: 'What is a leadframe?',
+            a: 'A leadframe is a thin metal plate that serves as the electrical interconnect between semiconductor die and external circuitry. Manufactured through high-precision stamping or etching, leadframes provide both mechanical support and conductive pathways for IC packages including QFN, SOIC, QFP, DIP, and BGA formats.',
+          },
+          {
+            q: 'What materials are used for lead frames?',
+            a: 'The most common materials for custom lead frames include copper alloys (C19400, C70250, C18150, C10200) for high conductivity applications, and iron-nickel alloys (Alloy 42) for low thermal expansion requirements. Material selection depends on the specific electrical, thermal, and mechanical requirements of the semiconductor package.',
+          },
+          {
+            q: 'What tolerance can you achieve on stamped lead frames?',
+            a: 'Our <strong class="text-steel-500">high precision lead frames</strong> achieve positional tolerance of &plusmn;0.002mm and coplanarity within 0.05mm across the full strip. These tolerances are maintained consistently across production volumes exceeding millions of units per run.',
+          },
+          {
+            q: 'Do you support custom leadframe designs?',
+            a: 'Yes. As a specialized lead frame manufacturer, we work directly with your engineering team from initial design review through tool development and full production. Our in-house tooling department can develop progressive stamping dies for any custom leadframe geometry.',
+          },
+        ].map(faq => (
+          <details class="group bg-white rounded-lg border border-steel-200/50">
+            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-navy-900 text-sm list-none">
+              {faq.q}
+              <span class="text-accent group-open:rotate-45 transition-transform text-lg leading-none ml-2">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm text-steel-400 leading-relaxed" set:html={faq.a}></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-accent">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-white mb-4">Request a Lead Frame Consultation</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+        Submit your drawings, material requirements, and target volumes. Our engineering team provides a DFM analysis and quotation within 24 hours.
+      </p>
+      <a href="/contact/" class="inline-flex items-center px-8 py-3.5 text-sm font-semibold text-accent bg-white hover:bg-steel-100 rounded transition-colors">
+        Get a Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Schema structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "High Precision Stamped Lead Frames",
+    "description": "Coplanarity-critical custom lead frames for semiconductor IC packaging. IATF 16949 certified, +/- 0.002mm tolerance, 1500+ SPM.",
+    "manufacturer": { "@type": "Organization", "name": "Kravzik Precision Manufacturing" },
+    "category": "Lead Frames",
+  })} />
+</BaseLayout>

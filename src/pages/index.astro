@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Precision Metal Stamping & Custom Lead Frames Manufacturer"
+  description="Kravzik is an IATF 16949 certified manufacturer of precision metal stamped parts, high-speed progressive die stamping, and custom lead frames for automotive, electronics, and industrial applications."
+>
+  <!-- Hero -->
+  <section class="relative bg-navy-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 20% 50%, #f97316 1px, transparent 1px); background-size: 40px 40px;"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/15 border border-accent/30 rounded-full text-accent text-xs font-semibold mb-6">
+          <span class="w-2 h-2 bg-accent rounded-full"></span>
+          IATF 16949 &amp; ISO 9001 Certified
+        </div>
+        <h1 class="text-white mb-6">
+          Precision Metal Stamping<br />
+          <span class="text-accent">for Mission-Critical Components</span>
+        </h1>
+        <p class="text-lg md:text-xl text-steel-300 leading-relaxed mb-8 max-w-2xl">
+          High-speed progressive die stamping with &plusmn;0.002mm tolerance. Custom lead frames, terminals, busbars, and assemblies for semiconductor, automotive EV, and industrial applications.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact/" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-accent hover:bg-accent-dark rounded transition-colors">
+            Request a Quote
+          </a>
+          <a href="/products/" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white border border-steel-500 hover:border-white hover:text-white rounded transition-colors">
+            View Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="bg-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {[
+          { value: '&plusmn;0.002mm', label: 'Tolerance' },
+          { value: '1500+', label: 'Strokes Per Minute' },
+          { value: '100%', label: 'Burr-Free Guarantee' },
+          { value: 'IATF 16949', label: 'Certified Facility' },
+        ].map(stat => (
+          <div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white mb-1" set:html={stat.value} />
+            <div class="text-xs font-medium text-steel-400 uppercase tracking-wider">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-accent text-sm font-semibold uppercase tracking-wider mb-2">Products</p>
+        <h2 class="mb-4">Precision Metal Stamped Parts</h2>
+        <p class="text-steel-400 max-w-2xl mx-auto">From <strong class="text-steel-500">custom lead frames</strong> for semiconductor packaging to high-current busbars, every part is manufactured to exacting standards in our IATF 16949 certified facility.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Lead Frames', href: '/products/lead-frame/', desc: 'Coplanarity-critical stamped leadframes for IC packaging. Sub-micron precision for QFN, SOIC, QFP, BGA, and power modules.', kw: 'stamped lead frames' },
+          { title: 'Electrical Terminals & Contacts', href: '/products/', desc: 'High-conductivity custom terminals for automotive connectors, relays, and electrical distribution systems.', kw: 'electrical terminals' },
+          { title: 'Copper Busbars', href: '/products/', desc: 'High-current stamped and formed copper busbars for EV power modules, inverters, and battery systems.', kw: 'copper busbars' },
+          { title: 'Automotive Brackets', href: '/products/', desc: 'Structural and mounting brackets with tight tolerance control for automotive chassis and assembly applications.', kw: 'automotive brackets' },
+          { title: 'EMI/RFI Shields', href: '/products/', desc: 'Precision-formed shielding solutions for electromagnetic and radio frequency interference protection.', kw: 'emi rfi shields' },
+          { title: 'Metal Assemblies', href: '/products/', desc: 'Integrated <strong class="text-steel-500">metal stamping assemblies</strong> combining multiple stamped components with welding and insertion.', kw: 'metal assemblies' },
+        ].map(product => (
+          <a href={product.href} class="group block p-6 bg-steel-100/50 hover:bg-steel-100 rounded-lg border border-steel-200/50 hover:border-accent/30 transition-all">
+            <h3 class="text-lg mb-2 group-hover:text-accent transition-colors">{product.title}</h3>
+            <p class="text-sm text-steel-400 leading-relaxed" set:html={product.desc} />
+            <span class="inline-block mt-4 text-xs font-semibold text-accent group-hover:translate-x-1 transition-transform">
+              View details <span aria-hidden="true">&rarr;</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 md:py-28 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-accent text-sm font-semibold uppercase tracking-wider mb-2">Services</p>
+        <h2 class="text-white mb-4">End-to-End Manufacturing Capabilities</h2>
+        <p class="text-steel-400 max-w-2xl mx-auto">From <strong class="text-steel-300">rapid prototyping</strong> to full-scale production, our integrated services reduce supply chain complexity and accelerate time-to-market.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: '◇', title: 'High-Speed Progressive Die Stamping', desc: '1500+ SPM capability for high-volume production of precision metal stamped parts.' },
+          { icon: '◆', title: 'Progressive Die Tooling', desc: 'In-house tool design and die manufacturing with advanced CAD/CAM and wire EDM.' },
+          { icon: '◈', title: 'Rapid Prototyping', desc: 'Accelerated sample development with 5-axis CNC machining for design validation.' },
+          { icon: '⬖', title: 'Heavy Gauge Stamping', desc: 'Thick material stamping up to 6mm for structural and high-strength applications.' },
+        ].map(service => (
+          <div class="p-6 bg-navy-800 rounded-lg border border-navy-700">
+            <div class="text-accent text-2xl mb-3">{service.icon}</div>
+            <h3 class="text-white text-base mb-2">{service.title}</h3>
+            <p class="text-sm text-steel-400 leading-relaxed">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/services/" class="inline-flex items-center px-6 py-3 text-sm font-semibold text-white border border-steel-500 hover:border-white rounded transition-colors">
+          All Services &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-accent text-sm font-semibold uppercase tracking-wider mb-2">Industries Served</p>
+        <h2 class="mb-4">Precision Components Across Critical Sectors</h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {[
+          'Semiconductor', 'Automotive EV', 'Telecommunications',
+          'Aerospace', 'Defense', 'Medical',
+          'Industrial Machinery', 'Consumer Electronics', 'Energy',
+          'Home Appliances', 'Logistics', 'Construction',
+        ].map(industry => (
+          <div class="flex items-center justify-center p-4 bg-steel-100/50 rounded text-sm font-medium text-navy-900 text-center border border-steel-200/50">
+            {industry}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-accent">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-white mb-4">Ready to Discuss Your Project?</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+        Send us your drawings and specifications. Our engineering team will respond with a feasibility analysis and quotation within 24 hours.
+      </p>
+      <a href="/contact/" class="inline-flex items-center px-8 py-3.5 text-sm font-semibold text-accent bg-white hover:bg-steel-100 rounded transition-colors">
+        Start Your Project
+      </a>
+    </div>
+  </section>
+</BaseLayout>

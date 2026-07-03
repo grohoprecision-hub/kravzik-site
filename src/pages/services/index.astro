@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Metal Stamping Services | Progressive Die, Tooling & Prototyping"
+  description="Kravzik provides high-speed progressive die stamping, in-house tooling design, rapid prototyping, and heavy gauge stamping services. IATF 16949 certified manufacturing."
+>
+  <section class="bg-navy-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Services</p>
+      <h1 class="text-white mb-4">Manufacturing Services</h1>
+      <p class="text-steel-300 text-lg max-w-2xl">
+        From concept validation to high-volume production, our integrated services reduce supply chain complexity and accelerate time-to-market.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-12">
+        {[
+          {
+            title: 'High-Speed Progressive Die Stamping',
+            desc: 'Our core manufacturing capability: 1500+ strokes per minute on precision high-speed presses. Continuous coil-fed production of complex stamped parts with multiple forming, piercing, coining, and blanking operations in a single pass.',
+            bullets: [
+              'Press capacity: 30 to 200 tons',
+              'Strip width: up to 100mm',
+              'Material thickness: 0.10mm to 4.0mm',
+              'Integrated in-die vision inspection',
+              'Reel-to-reel finished product packaging',
+            ],
+          },
+          {
+            title: 'Progressive Die Tooling',
+            desc: 'In-house tool design and manufacturing using advanced CAD/CAM systems. Wire EDM, CNC grinding, and jig boring for die components. Every tool undergoes try-out and capability study before release to production.',
+            bullets: [
+              'Complete die design using SolidWorks and VISI',
+              'Wire EDM with 0.02mm positioning accuracy',
+              'Tungsten carbide and high-speed steel tooling',
+              'Die life: 50 to 300+ million strokes',
+              'Quick-change modular die systems available',
+            ],
+          },
+          {
+            title: 'Rapid Prototyping',
+            desc: 'Accelerated sample development for design validation and functional testing. 5-axis CNC machining delivers prototype parts with production-representative geometry and tolerances.',
+            bullets: [
+              'Prototype delivery: 5-10 business days',
+              '5-axis CNC machining capability',
+              'Wire EDM for complex profiles',
+              'Material options matching production intent',
+              'Full dimensional inspection report included',
+            ],
+          },
+          {
+            title: 'Heavy Gauge Stamping',
+            desc: 'Thick material stamping for structural and high-strength components. Progressive die and transfer die processes for materials up to 6mm thickness.',
+            bullets: [
+              'Material thickness: 1.5mm to 6.0mm',
+              'Press capacity: 100 to 400 tons',
+              'Hot-rolled and cold-rolled steel processing',
+              'Structural and safety-critical components',
+              'Post-stamp heat treatment available',
+            ],
+          },
+        ].map(service => (
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12 border-b border-steel-200/50 last:border-0 last:pb-0">
+            <div class="lg:col-span-1">
+              <h2 class="text-xl mb-3">{service.title}</h2>
+              <p class="text-sm text-steel-400 leading-relaxed">{service.desc}</p>
+            </div>
+            <div class="lg:col-span-2">
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {service.bullets.map((b, i) => (
+                  <li class="flex items-start gap-2 text-sm text-steel-500">
+                    <span class="w-5 h-5 bg-accent/10 text-accent rounded flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">{i + 1}</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-accent">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-white mb-4">Start Your Manufacturing Project</h2>
+      <p class="text-white/80 text-lg mb-8">Submit your requirements and receive a detailed quotation within 24 hours.</p>
+      <a href="/contact/" class="inline-flex items-center px-8 py-3.5 text-sm font-semibold text-accent bg-white hover:bg-steel-100 rounded transition-colors">
+        Request Quote
+      </a>
+    </div>
+  </section>
+</BaseLayout>

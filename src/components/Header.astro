@@ -1,0 +1,64 @@
+---
+const navItems = [
+  { label: 'Products', href: '/products/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Contact', href: '/contact/' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-steel-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 shrink-0">
+        <span class="text-xl font-extrabold text-navy-900 tracking-tight">KRAVZIK</span>
+        <span class="hidden sm:inline text-xs font-medium text-steel-400 uppercase tracking-widest border-l border-steel-300 pl-2">Precision Mfg</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        {navItems.map(item => (
+          <a
+            href={item.href}
+            class="text-sm font-medium text-steel-500 hover:text-navy-900 transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <a
+        href="/contact/"
+        class="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-dark rounded transition-colors"
+      >
+        Request Quote
+      </a>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-steel-500 hover:text-navy-900" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-steel-200 bg-white">
+    <nav class="px-4 py-3 space-y-1">
+      {navItems.map(item => (
+        <a href={item.href} class="block px-3 py-2 text-sm font-medium text-steel-500 hover:text-navy-900 hover:bg-steel-100 rounded">
+          {item.label}
+        </a>
+      ))}
+      <a href="/contact/" class="block px-3 py-2.5 mt-2 text-sm font-semibold text-center text-white bg-accent hover:bg-accent-dark rounded">
+        Request Quote
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>
